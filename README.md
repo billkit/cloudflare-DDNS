@@ -25,7 +25,8 @@ root@frp:~# ip a
        valid_lft forever preferred_lft forever
 ```
 其中的`ens192`就是网卡的名称。
-如果 ipv6 地址非 24 开头，把`ipv6_addr.sh`文件中最后一行中`24`正确的IPV6地址开头。
+如果 ipv6 地址非 24 开头，把`ipv6_addr.sh`文件中最后一行中`24`改为正确的IPV6地址开头。
+
 三、执行脚本
 
 
