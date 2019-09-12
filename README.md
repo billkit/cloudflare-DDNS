@@ -12,7 +12,7 @@ wget https://github.com/junqi-chen/cloudflare-DDNS/releases/download/v0.1/cloudf
 
 unzip cloudflare-DDNS.zip
 
-cd cloudflare-DDNS.zip
+cd cloudflare-DDNS
 
 ```
 
