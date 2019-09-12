@@ -1,6 +1,8 @@
-# 本脚本适用于各 Linux 发行版、群晖。
-## 使用说明
+## 本脚本是偶尔从网上找到的，出处和作者想不起来了，经过简单修改适用于 Linux、群晖。
+
+### 使用说明
 一、安装依赖命令
+
 1、Debian/Ubuntu
 ```
 apt update
@@ -77,5 +79,6 @@ crontab -e
 复制以下语句到`crontab`中，每10 分钟执行一次。
 
 ```
-*/10 * * * *  /root/cloudflare-v6 >/dev/null 2>&1
+*/10 * * * *  /root/cloudflare-DDNS/cloudflare-v6 >/dev/null 2>&1
 ```
+
