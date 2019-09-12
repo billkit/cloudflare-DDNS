@@ -8,7 +8,7 @@ auth_key=授权码
 zone_name="顶级域名"
 record_name="需要解析的二级域名"
 ```
-二、修改` ipv6_addr.sh`文件，把`Interface=ens192`中的`ens192`改成系统网卡的名称，
+二、修改` ipv6_addr.sh`文件，把`Interface=eth0`中的`eth0`改成系统网卡的名称，
 
 查看系统网卡名称可以使用命令`ip a`。
 ```
@@ -26,6 +26,11 @@ root@frp:~# ip a
 ```
 其中的`ens192`就是网卡的名称。
 如果 ipv6 地址非 24 开头，把`ipv6_addr.sh`文件中最后一行中`24`改为正确的IPV6地址开头。
+修改完执行`./ipv6_addr.sh`,看到只有一个IPV6 地址说修改正确。
+```
+root@Cloud:~/cloudflare-DDNS-master# ./ipv6_addr.sh 
+2409:8855:f24b:b670:200c:292f:fefb:87b1
+```
 
 三、执行脚本
 
