@@ -1,4 +1,4 @@
-#!/bin/vbash
+#!/bin/bash
 #  This script will grep the external accessible IPv6 for the specified interface.
 
 Interface=$1
