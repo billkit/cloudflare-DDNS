@@ -7,7 +7,8 @@ zone_name="xxxx.ga"
 record_name="www.xxxx.ga"
 rec_type=AAAA
 ## calls the ipv6_addr.sh script to return an external IPv6 on default interface eth0
-content=`curl ip.sb`
+#content=`curl ip.sb`
+content=`/root/cloudflare-DDNS/ipv6_addr.sh`
 echo $(date) 
 echo "Checking $rec_type for $record_name"
 zone_id=`curl -s -X GET "https://api.cloudflare.com/client/v4/zones?name=$zone_name" \
