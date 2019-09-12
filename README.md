@@ -1,5 +1,11 @@
 # 本脚本适用于各 Linux 发行版、macOS、群晖。
-一、修改 `cloudflare-v6.sh` 文件中的`auth_email`、`auth_key`、`zone_name`、`record_name`。
+## 使用说明
+一、安装依赖命令
+1、Debian/Ubuntu
+```
+apt update & apt install curl unzip wget -y
+```
+2、修改 `cloudflare-v6.sh` 文件中的`auth_email`、`auth_key`、`zone_name`、`record_name`。
 
 ```
 auth_email="登陆Cloudflare 的邮箱"
@@ -8,7 +14,7 @@ zone_name="顶级域名"
 record_name="需要解析的二级域名"
 ```
 
-二、修改`ipv6_addr.sh`文件，把`Interface=eth0`中的`eth0`改成系统网卡的名称，
+3、修改`ipv6_addr.sh`文件，把`Interface=eth0`中的`eth0`改成系统网卡的名称，
 
 查看系统网卡名称可以使用命令`ip a`。
 ```
@@ -32,13 +38,13 @@ chomd +x cloudflare-v6.sh ipv6_addr.sh
 ```
 查看IPV6 地址
 
-修改完执行`./ipv6_addr.sh`,看到只有一个IPV6 地址说修改正确。
+执行`./ipv6_addr.sh`,看到只有一个IPV6 地址说明修改正确。
 ```
 root@Cloud:~/cloudflare-DDNS# ./ipv6_addr.sh 
 2409:8855:f24b:b670:200c:292f:fefb:87b1
 ```
 
-三、执行脚本
+二、执行脚本
 
 ```
 root@Cloud:~/cloudflare-DDNS# ./cloudflare-v6
@@ -48,7 +54,7 @@ Zone ID:  1a2b3c43erfd45566gfdd567ujhgds
 Record ID:  2weds34re5t6y8i1qe35t6yfcd456yhnb
 Current Content:  2409:9a34:b45b:b690::f23b
 New Content:  2409:6a55:f98cb:b56f::b4f3
-Content not changed.  Exiting.
+Content Changed.  Update Cloudflare.
 ```
 定时更新
 把脚本加入 `crontab` 定时执行更新
