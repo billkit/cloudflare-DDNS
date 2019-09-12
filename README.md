@@ -1,11 +1,22 @@
-# 本脚本适用于各 Linux 发行版、macOS、群晖。
+# 本脚本适用于各 Linux 发行版、群晖。
 ## 使用说明
 一、安装依赖命令
 1、Debian/Ubuntu
 ```
-apt update & apt install curl unzip wget -y
+apt update
+apt install curl unzip wget -y
 ```
-2、修改 `cloudflare-v6.sh` 文件中的`auth_email`、`auth_key`、`zone_name`、`record_name`。
+2、获取脚本
+```
+wget https://github.com/junqi-chen/cloudflare-DDNS/releases/download/v0.1/cloudflare-DDNS.zip
+
+unzip cloudflare-DDNS.zip
+
+cd cloudflare-DDNS.zip
+
+```
+
+3、修改 `cloudflare-v6.sh` 文件中的`auth_email`、`auth_key`、`zone_name`、`record_name`。
 
 ```
 auth_email="登陆Cloudflare 的邮箱"
@@ -36,9 +47,9 @@ root@frp:~# ip a
 ```
 chomd +x cloudflare-v6.sh ipv6_addr.sh
 ```
-查看IPV6 地址
+查看本机 IPV6 地址
 
-执行`./ipv6_addr.sh`,看到只有一个IPV6 地址说明修改正确。
+执行`./ipv6_addr.sh`,看到只有一个 IPV6 地址说明修改正确。
 ```
 root@Cloud:~/cloudflare-DDNS# ./ipv6_addr.sh 
 2409:8855:f24b:b670:200c:292f:fefb:87b1
