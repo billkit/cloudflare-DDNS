@@ -45,7 +45,8 @@ root@frp:~# ip a
 ```
 其中的`ens192`就是网卡的名称。
 如果 ipv6 地址非 24 开头，把`ipv6_addr.sh`文件中最后一行中`24`改为正确的IPV6地址开头。
-赋予执行权限
+
+4、赋予执行权限
 ```
 chomd +x cloudflare-v6.sh ipv6_addr.sh
 ```
@@ -60,7 +61,7 @@ root@Cloud:~/cloudflare-DDNS# ./ipv6_addr.sh
 二、执行脚本
 
 ```
-root@Cloud:~/cloudflare-DDNS# ./cloudflare-v6
+root@Cloud:~/cloudflare-DDNS# ./cloudflare-v6.sh
 Fri Sep 13 00:24:15 CST 2019
 Checking AAAA for www.xxxx.ga
 Zone ID:  1a2b3c43erfd45566gfdd567ujhgds
@@ -79,6 +80,6 @@ crontab -e
 复制以下语句到`crontab`中，每10 分钟执行一次。
 
 ```
-*/10 * * * *  /root/cloudflare-DDNS/cloudflare-v6 >/dev/null 2>&1
+*/10 * * * *  /root/cloudflare-DDNS/cloudflare-v6.sh >/dev/null 2>&1
 ```
 
