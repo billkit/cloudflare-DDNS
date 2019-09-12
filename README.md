@@ -1,5 +1,5 @@
-# cloudflare-DDNS
-修改 cf-ddns-v6.sh 文件
+# 使用说明
+修改 cf-ddns-v6.sh 文件中的`auth_email`、`auth_key`、`zone_name`、`record_name`
 
 ```
 auth_email="xxxxxxx@gmail.com"
