@@ -10,11 +10,11 @@ apt install curl unzip wget -y
 ```
 2、获取脚本
 ```
-wget https://github.com/junqi-chen/cloudflare-DDNS/releases/download/v0.1/cloudflare-DDNS.zip
+wget https://github.com/junqi-chen/cloudflare-DDNS/releases/download/v0.1/cloudflare-DDNS-master.zip 
 
-unzip cloudflare-DDNS.zip
+unzip cloudflare-DDNS-master.zip
 
-cd cloudflare-DDNS
+cd cloudflare-DDNS-master
 
 ```
 
@@ -80,6 +80,6 @@ crontab -e
 复制以下语句到`crontab`中，每10 分钟执行一次。
 
 ```
-*/10 * * * *  /root/cloudflare-DDNS/cloudflare-v6.sh >/dev/null 2>&1
+*/10 * * * *  /root/cloudflare-DDNS-master/cloudflare-v6.sh >/dev/null 2>&1
 ```
 
