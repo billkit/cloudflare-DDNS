@@ -10,7 +10,7 @@ apt install curl unzip wget -y
 ```
 2、获取脚本
 ```
-wget https://github.com/junqi-chen/cloudflare-DDNS/releases/download/v0.1/cloudflare-DDNS-master.zip 
+wget https://github.com/billkit/cloudflare-DDNS/releases/download/v0.1/cloudflare-DDNS-master.zip 
 
 unzip cloudflare-DDNS-master.zip
 
