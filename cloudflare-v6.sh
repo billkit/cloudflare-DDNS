@@ -23,7 +23,7 @@ record_id=`curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$zone_id/d
 -H "X-Auth-Email: $auth_email" \
 -H "X-Auth-Key: $auth_key" \
 -H "content-Type: application/json" | \
-grep -Eo '"id":"[^"]*' | head -1 | sed -n 's/"id":"*//p'`
+grep -Eo '"id": "[^"]*' | head -1 | sed -n 's/"id": "*//p'`
 
 echo "Record ID: " $record_id
 
@@ -31,7 +31,7 @@ current_content=`curl -s -X GET "https://api.cloudflare.com/client/v4/zones/$zon
 -H "X-Auth-Email: $auth_email" \
 -H "X-Auth-Key: $auth_key" \
 -H "content-Type: application/json" | \
-grep -Eo '"content":"[^"]*' | head -1 | sed -n 's/"content":"*//p'`
+grep -Eo '"content": "[^"]*' | head -1 | sed -n 's/"content": "*//p'`
 
 echo "Current Content: " $current_content
 echo "New Content: " $content
